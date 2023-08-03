@@ -1,5 +1,10 @@
 name: Events Demo 1
-on: ...
+on:    #[push, workflow_dispatch] # multiple events
+  pull_request:
+    types: # to add the activity type 
+      - opened
+      - edited
+  workflow_dispatch: # even though it doen't have any details put :
 jobs:
   deploy:
     runs-on: ubuntu-latest
