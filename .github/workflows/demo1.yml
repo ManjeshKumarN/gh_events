@@ -4,6 +4,9 @@ on:    #[push, workflow_dispatch] # multiple events
     types: # to add the activity type 
       - opened
       - edited
+  pull_request_target:
+    types:
+      - closed
   workflow_dispatch: # even though it doen't have any details put :
 jobs:
   deploy:
